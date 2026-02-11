@@ -70,7 +70,7 @@ export default function Home() {
               className="relative"
             >
               <Image
-                src="/images/lawrence-avatar-transparent.png"
+                src={process.env.NODE_ENV === 'development' ? '/images/lawrence-avatar-transparent.png' : '/nextjs-portfolio/images/lawrence-avatar-transparent.png'}
                 alt="Lawrence Illustration"
                 width={450}
                 height={450}
@@ -152,7 +152,7 @@ export default function Home() {
               }}
             >
               <Image
-                src="/images/about-illustration.png"
+                src={process.env.NODE_ENV === 'development' ? '/images/about-illustration.png' : '/nextjs-portfolio/images/about-illustration.png'}
                 alt="Lawrence working at desk"
                 width={520}
                 height={520}
