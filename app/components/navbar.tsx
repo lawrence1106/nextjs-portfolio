@@ -36,10 +36,10 @@ const Navbar = () => {
 
         {/* Links */}
         <div className="flex gap-8 text-sm font-medium">
-          <NavLink href="/overview">Overview</NavLink>
-          <NavLink href="/experience">Experience</NavLink>
-          <NavLink href="/projects">Projects</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href={process.env.NODE_ENV === 'development' ? '/overview' : '/nextjs-portfolio/overview'}>Overview</NavLink>
+          <NavLink href={process.env.NODE_ENV === 'development' ? '/experience' : '/nextjs-portfolio/experience'}>Experience</NavLink>
+          <NavLink href={process.env.NODE_ENV === 'development' ? '/projects' : '/nextjs-portfolio/projects'}>Projects</NavLink>
+          <NavLink href={process.env.NODE_ENV === 'development' ? '/contact' : '/nextjs-portfolio/contact'}>Contact</NavLink>
         </div>
 
       </div>
