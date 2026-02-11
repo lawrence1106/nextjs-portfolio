@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import { HomeIcon } from "@heroicons/react/16/solid";
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
