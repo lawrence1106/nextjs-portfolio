@@ -28,7 +28,7 @@ const Navbar = () => {
 
         {/* Logo / Home */}
         <a
-          href="/"
+          href={process.env.NODE_ENV === 'development' ? '/' : '/nextjs-portfolio'}
           className="text-gray-300 hover:text-white transition-colors duration-300"
         >
           🏠
