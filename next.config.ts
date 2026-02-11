@@ -1,7 +1,7 @@
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
+import { PHASE_DEVELOPMENT_SERVER } from 'next/constants'
 
 /** @type {import('next').NextConfig} */
-const nextConfig = phase => {
+const nextConfig = (phase: string) => {
   const isDev = phase === PHASE_DEVELOPMENT_SERVER
 
   return {
