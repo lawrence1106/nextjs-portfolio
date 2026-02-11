@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  output: 'export', // <=== enables static exports
   images: {
-    unoptimized: true, // Required for GitHub Pages
+    unoptimized: true, // <=== disable Next.js image optimization (not compatible with static export)
   },
-  basePath: "/nextjs-portfolio",
-  assetPrefix: "/nextjs-portfolio/",
 };
 
 module.exports = nextConfig;
