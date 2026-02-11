@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for GitHub Pages
   },
-  basePath: process.env.NODE_ENV === "production" ? "/nextjs-portfolio" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/nextjs-portfolio/" : "",
+  basePath: "/nextjs-portfolio",
+  assetPrefix: "/nextjs-portfolio/",
 };
 
 module.exports = nextConfig;
