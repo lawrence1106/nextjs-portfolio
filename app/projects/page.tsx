@@ -125,8 +125,6 @@ const liveProjects: {
     description:
       "Construction delivery platform that connects lookahead planning, daily operations, resource planning, production tracking, and site diaries in one live system.",
     tech: ["React", "TypeScript", "Redux Toolkit", "Firebase", "Hono"],
-    liveUrl: "https://www.aphex.co/",
-    liveLabel: "Visit Aphex Website",
   },
   {
     title: "Ezy",
