@@ -124,7 +124,7 @@ const liveProjects: {
     type: "Current Work",
     description:
       "Construction delivery platform that connects lookahead planning, daily operations, resource planning, production tracking, and site diaries in one live system.",
-    tech: ["Web Platform", "Project Delivery", "Construction Tech"],
+    tech: ["React", "TypeScript", "Redux Toolkit", "Firebase", "Hono"],
     liveUrl: "https://www.aphex.co/",
     liveLabel: "Visit Aphex Website",
   },
