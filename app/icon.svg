@@ -1,0 +1,21 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="favicon-gradient" x1="10" y1="7" x2="31" y2="33" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="0.52" stop-color="#BBD9FF"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="favicon-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#favicon-glow)">
+    <rect x="12" y="8" width="10" height="24" rx="5" fill="url(#favicon-gradient)"/>
+    <rect x="16" y="22" width="17" height="10" rx="5" fill="url(#favicon-gradient)"/>
+    <path d="M17 11V22C17 25.3 19.7 28 23 28H29" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

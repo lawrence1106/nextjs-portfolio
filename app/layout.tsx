@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     template: "%s | Lawrence Torres",
   },
   description: "Senior Software Engineer — React, Node.js, scalable web apps.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
