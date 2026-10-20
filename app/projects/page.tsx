@@ -115,9 +115,17 @@ const liveProjects: {
   type: string;
   description: string;
   tech: string[];
-  github: string;
+  github?: string;
   liveUrl?: string;
 }[] = [
+  {
+    title: "Aphex Planner",
+    type: "Current Work",
+    description:
+      "Construction delivery platform that connects lookahead planning, daily operations, resource planning, production tracking, and site diaries in one live system.",
+    tech: ["Web Platform", "Project Delivery", "Construction Tech"],
+    liveUrl: "https://www.aphex.co/",
+  },
   {
     title: "Ezy",
     type: "Customer Web Application",
@@ -180,15 +188,15 @@ export default function Projects() {
         <div className="mb-10">
           <div className="flex flex-wrap items-center gap-3">
             <h2 className="text-2xl font-semibold text-white">
-              Ezy Platform
+              Current Work
             </h2>
             <span className="text-xs uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
               Live
             </span>
           </div>
           <p className="mt-3 text-gray-400 max-w-2xl">
-            A full-stack platform with a customer application, administration
-            dashboard, and supporting backend services.
+            Products and platforms I’m currently building, supporting, and
+            maintaining.
           </p>
         </div>
 
@@ -241,14 +249,16 @@ export default function Projects() {
                     Visit Live Project →
                   </a>
                 )}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  View on GitHub →
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View on GitHub →
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
