@@ -13,7 +13,7 @@ const experiences = [
       "Building and maintaining modern full-stack web applications, collaborating across engineering and product teams, and delivering reliable, scalable features.",
   },
   {
-    role: "Senior Fullstack Engineer",
+    role: "Senior Full Stack Engineer",
     company: "Procconv",
     location: "Remote",
     period: "2025",
@@ -57,7 +57,11 @@ export default function Experience() {
         transition={{ duration: 0.6 }}
         className="mb-20"
       >
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+        <div className="flex items-center gap-3 text-xs uppercase tracking-[0.24em] text-blue-300 mb-5">
+          <span className="h-px w-10 bg-blue-400"></span>
+          <span>Career timeline</span>
+        </div>
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-[-0.04em] text-white">
           Experience
         </h1>
         <p className="mt-4 text-gray-400 max-w-2xl text-lg">
@@ -78,15 +82,15 @@ export default function Experience() {
             className="relative pl-10"
           >
             {/* Timeline Dot */}
-            <div className="absolute -left-[11px] top-2 w-4 h-4 bg-blue-400 rounded-full shadow-lg shadow-blue-400/30"></div>
+            <div className="absolute -left-[9px] top-2 w-4 h-4 bg-blue-400 rounded-full shadow-lg shadow-blue-400/30"></div>
 
             {/* Card */}
             <div className="
               bg-white/5 backdrop-blur-md
-              border border-white/10
               rounded-xl p-6
-              hover:border-blue-400/40
-              hover:bg-white/10
+              hover:-translate-y-1
+              hover:bg-blue-400/[0.08]
+              hover:shadow-[0_12px_30px_rgba(59,130,246,0.16)]
               transition-all duration-300
             ">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-3">
@@ -104,7 +108,7 @@ export default function Experience() {
                     href={exp.companyUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-blue-400 transition-colors"
+                    className="transition-all duration-300 hover:-translate-y-0.5 hover:text-blue-200 hover:drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
                   >
                     {exp.company}
                   </a>
