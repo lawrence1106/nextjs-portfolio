@@ -230,7 +230,6 @@ export default function Projects() {
           {professionalProjects.map((project) => (
             <motion.div
               key={project.title}
-              whileHover={{ y: -8 }}
               className="
                 bg-white/5 backdrop-blur-md
                 rounded-2xl p-6
@@ -325,7 +324,6 @@ export default function Projects() {
           {personalLiveProjects.map((project) => (
             <motion.div
               key={project.title}
-              whileHover={{ y: -8 }}
               className="
                 bg-white/5 backdrop-blur-md
                 rounded-xl p-6
@@ -415,7 +413,6 @@ export default function Projects() {
           {personalProjects.map((project) => (
             <motion.div
               key={project.title}
-              whileHover={{ y: -8 }}
               className="
                 bg-white/5 backdrop-blur-md
                 rounded-xl p-8
@@ -498,7 +495,6 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            whileHover={{ y: -8 }}
             className="
               bg-white/5 backdrop-blur-md
                 rounded-2xl p-6
