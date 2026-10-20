@@ -171,6 +171,18 @@ const personalLiveProjects = liveProjects.filter(
   (project) => project.title !== "Aphex Planner",
 );
 
+const projectVisualStyles: Record<string, string> = {
+  "Aphex Planner":
+    "bg-[radial-gradient(circle_at_75%_20%,rgba(96,165,250,0.65),transparent_30%),linear-gradient(135deg,#172554,#0f172a)]",
+  Ezy: "bg-[radial-gradient(circle_at_25%_20%,rgba(129,140,248,0.6),transparent_32%),linear-gradient(135deg,#172554,#111827)]",
+  "Ezy Admin":
+    "bg-[radial-gradient(circle_at_80%_25%,rgba(56,189,248,0.55),transparent_30%),linear-gradient(135deg,#164e63,#0f172a)]",
+  "Ezy API":
+    "bg-[radial-gradient(circle_at_30%_75%,rgba(59,130,246,0.55),transparent_28%),linear-gradient(135deg,#1e3a8a,#111827)]",
+  "Ezy TF2 Service":
+    "bg-[radial-gradient(circle_at_70%_70%,rgba(99,102,241,0.55),transparent_30%),linear-gradient(135deg,#312e81,#0f172a)]",
+};
+
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
@@ -184,7 +196,11 @@ export default function Projects() {
 
       {/* Title */}
       <motion.div {...fadeUp} className="mb-20">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+        <div className="flex items-center gap-3 text-xs uppercase tracking-[0.24em] text-blue-300 mb-5">
+          <span className="h-px w-10 bg-blue-400"></span>
+          <span>Selected builds</span>
+        </div>
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-[-0.04em] text-white">
           Projects
         </h1>
         <p className="mt-4 text-gray-400 max-w-2xl text-lg leading-relaxed">
@@ -217,14 +233,28 @@ export default function Projects() {
               whileHover={{ y: -8 }}
               className="
                 bg-white/5 backdrop-blur-md
-                border border-white/10
-                rounded-xl p-6
+                rounded-2xl p-6
                 h-full flex flex-col
-                hover:border-blue-400/40
-                hover:bg-white/10
+                hover:-translate-y-1
+                hover:bg-blue-400/[0.08]
+                hover:shadow-[0_12px_30px_rgba(59,130,246,0.16)]
                 transition-all duration-300
               "
             >
+              <div
+                className={"relative mb-6 h-36 overflow-hidden rounded-2xl border border-white/15 " + projectVisualStyles[project.title]}
+              >
+                <div className="absolute -right-8 -top-10 h-32 w-32 rounded-full border border-white/20 bg-white/10 blur-sm"></div>
+                <div className="absolute -bottom-12 -left-8 h-36 w-36 rounded-full border border-blue-200/20"></div>
+                <div className="absolute inset-0 flex items-end justify-between p-5">
+                  <span className="text-3xl font-semibold tracking-[-0.06em] text-white/90">
+                    {project.title === "Aphex Planner" ? "APHEX" : "EZY"}
+                  </span>
+                  <span className="rounded-full border border-white/20 bg-black/20 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-blue-100 backdrop-blur-sm">
+                    {project.title === "Aphex Planner" ? "Product" : "Platform"}
+                  </span>
+                </div>
+              </div>
               <p className="text-xs uppercase tracking-wider text-blue-400 mb-2">
                 {project.type}
               </p>
@@ -254,7 +284,7 @@ export default function Projects() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                    className="text-sm text-blue-400 transition-all duration-300 hover:-translate-y-0.5 hover:text-blue-200 hover:drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
                   >
                     {project.liveLabel ?? "Visit Live Project"} →
                   </a>
@@ -264,7 +294,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                    className="text-sm text-blue-400 transition-all duration-300 hover:-translate-y-0.5 hover:text-blue-200 hover:drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
                   >
                     View on GitHub →
                   </a>
@@ -299,14 +329,28 @@ export default function Projects() {
               whileHover={{ y: -8 }}
               className="
                 bg-white/5 backdrop-blur-md
-                border border-white/10
                 rounded-xl p-6
                 h-full flex flex-col
-                hover:border-blue-400/40
-                hover:bg-white/10
+                hover:-translate-y-1
+                hover:bg-blue-400/[0.08]
+                hover:shadow-[0_12px_30px_rgba(59,130,246,0.16)]
                 transition-all duration-300
               "
             >
+              <div
+                className={"relative mb-6 h-36 overflow-hidden rounded-2xl border border-white/15 " + projectVisualStyles[project.title]}
+              >
+                <div className="absolute -right-8 -top-10 h-32 w-32 rounded-full border border-white/20 bg-white/10 blur-sm"></div>
+                <div className="absolute -bottom-12 -left-8 h-36 w-36 rounded-full border border-blue-200/20"></div>
+                <div className="absolute inset-0 flex items-end justify-between p-5">
+                  <span className="text-3xl font-semibold tracking-[-0.06em] text-white/90">
+                    EZY
+                  </span>
+                  <span className="rounded-full border border-white/20 bg-black/20 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-blue-100 backdrop-blur-sm">
+                    Platform
+                  </span>
+                </div>
+              </div>
               <p className="text-xs uppercase tracking-wider text-blue-400 mb-2">
                 {project.type}
               </p>
@@ -336,7 +380,7 @@ export default function Projects() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                    className="text-sm text-blue-400 transition-all duration-300 hover:-translate-y-0.5 hover:text-blue-200 hover:drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
                   >
                     {project.liveLabel ?? "Visit Live Project"} →
                   </a>
@@ -346,7 +390,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                    className="text-sm text-blue-400 transition-all duration-300 hover:-translate-y-0.5 hover:text-blue-200 hover:drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
                   >
                     View on GitHub →
                   </a>
@@ -376,13 +420,27 @@ export default function Projects() {
               whileHover={{ y: -8 }}
               className="
                 bg-white/5 backdrop-blur-md
-                border border-white/10
                 rounded-xl p-8
-                hover:border-blue-400/40
-                hover:bg-white/10
+                hover:-translate-y-1
+                hover:bg-blue-400/[0.08]
+                hover:shadow-[0_12px_30px_rgba(59,130,246,0.16)]
                 transition-all duration-300
               "
             >
+              <div
+                className={"relative mb-6 h-36 overflow-hidden rounded-2xl border border-white/15 " + (projectVisualStyles[project.title] ?? "bg-[radial-gradient(circle_at_75%_20%,rgba(96,165,250,0.45),transparent_30%),linear-gradient(135deg,#172554,#0f172a)]")}
+              >
+                <div className="absolute -right-8 -top-10 h-32 w-32 rounded-full border border-white/20 bg-white/10 blur-sm"></div>
+                <div className="absolute -bottom-12 -left-8 h-36 w-36 rounded-full border border-blue-200/20"></div>
+                <div className="absolute inset-0 flex items-end justify-between p-5">
+                  <span className="max-w-[70%] text-2xl font-semibold uppercase tracking-[-0.05em] text-white/90">
+                    {project.title}
+                  </span>
+                  <span className="rounded-full border border-white/20 bg-black/20 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-blue-100 backdrop-blur-sm">
+                    Build
+                  </span>
+                </div>
+              </div>
               <div className="mb-4">
                 <h3 className="text-xl font-semibold text-white">
                   {project.title}
@@ -413,7 +471,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex mt-6 text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                  className="inline-flex mt-6 text-sm text-blue-400 transition-all duration-300 hover:-translate-y-0.5 hover:text-blue-200 hover:drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
                 >
                   View on GitHub →
                 </a>
@@ -446,13 +504,28 @@ export default function Projects() {
             whileHover={{ y: -8 }}
             className="
               bg-white/5 backdrop-blur-md
-              border border-white/10
-              rounded-xl p-8
-              hover:border-blue-400/40
-              hover:bg-white/10
+                rounded-2xl p-6
+              hover:-translate-y-1
+              hover:bg-blue-400/[0.08]
+              hover:shadow-[0_12px_30px_rgba(59,130,246,0.16)]
               transition-all duration-300
             "
           >
+            <div
+              className={"relative mb-6 h-36 overflow-hidden rounded-2xl border border-white/15 " + (projectVisualStyles[project.title] ?? "bg-[radial-gradient(circle_at_75%_20%,rgba(96,165,250,0.45),transparent_30%),linear-gradient(135deg,#172554,#0f172a)]")}
+            >
+              <div className="absolute -right-8 -top-10 h-32 w-32 rounded-full border border-white/20 bg-white/10 blur-sm"></div>
+              <div className="absolute -bottom-12 -left-8 h-36 w-36 rounded-full border border-blue-200/20"></div>
+              <div className="absolute inset-0 flex items-end justify-between p-5">
+                <span className="max-w-[70%] text-2xl font-semibold uppercase tracking-[-0.05em] text-white/90">
+                  {project.title}
+                </span>
+                <span className="rounded-full border border-white/20 bg-black/20 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-blue-100 backdrop-blur-sm">
+                  Build
+                </span>
+              </div>
+            </div>
+
             {/* Header */}
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-white">
@@ -490,7 +563,7 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex mt-6 text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                className="inline-flex mt-6 text-sm text-blue-400 transition-all duration-300 hover:-translate-y-0.5 hover:text-blue-200 hover:drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
               >
                 View on GitHub →
               </a>

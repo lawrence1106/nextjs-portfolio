@@ -22,7 +22,11 @@ export default function Contact() {
 
       {/* Title */}
       <motion.div {...fadeUp} className="mb-20">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+        <div className="flex items-center gap-3 text-xs uppercase tracking-[0.24em] text-blue-300 mb-5">
+          <span className="h-px w-10 bg-blue-400"></span>
+          <span>Start a conversation</span>
+        </div>
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-[-0.04em] text-white">
           Contact
         </h1>
         <p className="mt-4 text-gray-400 max-w-xl text-lg leading-relaxed">
@@ -102,10 +106,10 @@ function ContactCard({
       className="
         group h-24 flex items-center gap-4
         bg-white/5 backdrop-blur-md
-        border border-white/10
         rounded-xl px-6
-        hover:border-blue-400/40
-        hover:bg-white/10
+        hover:-translate-y-1
+        hover:bg-blue-400/[0.08]
+        hover:shadow-[0_12px_30px_rgba(59,130,246,0.16)]
         transition-all duration-300
       "
     >

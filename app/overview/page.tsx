@@ -16,12 +16,16 @@ export default function Overview() {
 
       {/* Page Title */}
       <motion.div {...fadeUp} className="mb-20">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+        <div className="flex items-center gap-3 text-xs uppercase tracking-[0.24em] text-blue-300 mb-5">
+          <span className="h-px w-10 bg-blue-400"></span>
+          <span>How I work</span>
+        </div>
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-[-0.04em] text-white">
           Overview
         </h1>
         <p className="mt-4 text-gray-400 max-w-2xl text-lg leading-relaxed">
-          Frontend Engineer specializing in modern React applications,
-          with solid full-stack and backend experience.
+          Full-stack engineer building modern web applications across
+          frontend, backend, and product systems.
         </p>
       </motion.div>
 
@@ -32,10 +36,10 @@ export default function Overview() {
             What I Focus On
           </h2>
           <p className="text-gray-400 leading-relaxed">
-            I build responsive, scalable frontend applications using React,
-            Next.js, and TypeScript. I care about performance, clean UI
-            architecture, and writing code that remains maintainable as
-            projects grow.
+            I build responsive, scalable web applications using React,
+            Next.js, TypeScript, and modern backend services. I care about
+            performance, clear UI architecture, and code that remains
+            maintainable as products grow.
           </p>
         </div>
 
@@ -44,9 +48,9 @@ export default function Overview() {
             Beyond the Frontend
           </h2>
           <p className="text-gray-400 leading-relaxed">
-            While frontend is my core strength, I also work comfortably with
-            Node.js, REST APIs, databases, and backend integrations. This helps
-            me understand the full system and collaborate effectively across teams.
+            I work comfortably with Node.js, REST APIs, databases, and backend
+            integrations. That lets me understand the full system and
+            collaborate effectively across product and engineering teams.
           </p>
         </div>
       </motion.div>
@@ -85,10 +89,10 @@ export default function Overview() {
                       className="
                         group h-20 flex items-center gap-4
                         bg-white/5 backdrop-blur-md
-                        border border-white/10
                         rounded-xl px-6
-                        hover:border-blue-400/40
-                        hover:bg-white/10
+                        hover:-translate-y-1
+                        hover:bg-blue-400/[0.08]
+                        hover:shadow-[0_12px_30px_rgba(59,130,246,0.16)]
                         transition-all duration-300
                       "
                     >
@@ -111,8 +115,8 @@ export default function Overview() {
           What You Can Expect
         </h2>
         <p className="text-gray-400 leading-relaxed">
-          Clean frontend architecture, strong collaboration with backend teams,
-          and a practical approach to building features that deliver real value.
+          Thoughtful product interfaces, reliable backend systems, and a
+          practical approach to building features that deliver real value.
         </p>
       </motion.div>
     </div>
