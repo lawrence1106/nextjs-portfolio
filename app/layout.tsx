@@ -3,6 +3,8 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 
+const siteBasePath = process.env.NODE_ENV === "development" ? "" : "/nextjs-portfolio";
+
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
   },
   description: "Senior Software Engineer — React, Node.js, scalable web apps.",
   icons: {
-    icon: "/icon.svg",
+    icon: `${siteBasePath}/icon.svg`,
   },
 };
 
