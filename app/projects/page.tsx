@@ -242,10 +242,9 @@ export default function Projects() {
               "
             >
               <div
-                className={"relative mb-6 h-36 overflow-hidden rounded-2xl border border-white/15 " + projectVisualStyles[project.title]}
+                className={"relative mb-6 h-36 overflow-hidden rounded-2xl " + projectVisualStyles[project.title]}
               >
-                <div className="absolute -right-8 -top-10 h-32 w-32 rounded-full border border-white/20 bg-white/10 blur-sm"></div>
-                <div className="absolute -bottom-12 -left-8 h-36 w-36 rounded-full border border-blue-200/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-blue-500/[0.16]"></div>
                 <div className="absolute inset-0 flex items-end justify-between p-5">
                   <span className="text-3xl font-semibold tracking-[-0.06em] text-white/90">
                     {project.title === "Aphex Planner" ? "APHEX" : "EZY"}
@@ -338,10 +337,9 @@ export default function Projects() {
               "
             >
               <div
-                className={"relative mb-6 h-36 overflow-hidden rounded-2xl border border-white/15 " + projectVisualStyles[project.title]}
+                className={"relative mb-6 h-36 overflow-hidden rounded-2xl " + projectVisualStyles[project.title]}
               >
-                <div className="absolute -right-8 -top-10 h-32 w-32 rounded-full border border-white/20 bg-white/10 blur-sm"></div>
-                <div className="absolute -bottom-12 -left-8 h-36 w-36 rounded-full border border-blue-200/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-blue-500/[0.16]"></div>
                 <div className="absolute inset-0 flex items-end justify-between p-5">
                   <span className="text-3xl font-semibold tracking-[-0.06em] text-white/90">
                     EZY
@@ -428,10 +426,9 @@ export default function Projects() {
               "
             >
               <div
-                className={"relative mb-6 h-36 overflow-hidden rounded-2xl border border-white/15 " + (projectVisualStyles[project.title] ?? "bg-[radial-gradient(circle_at_75%_20%,rgba(96,165,250,0.45),transparent_30%),linear-gradient(135deg,#172554,#0f172a)]")}
+                className={"relative mb-6 h-36 overflow-hidden rounded-2xl " + (projectVisualStyles[project.title] ?? "bg-[radial-gradient(circle_at_75%_20%,rgba(96,165,250,0.45),transparent_30%),linear-gradient(135deg,#172554,#0f172a)]")}
               >
-                <div className="absolute -right-8 -top-10 h-32 w-32 rounded-full border border-white/20 bg-white/10 blur-sm"></div>
-                <div className="absolute -bottom-12 -left-8 h-36 w-36 rounded-full border border-blue-200/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-blue-500/[0.16]"></div>
                 <div className="absolute inset-0 flex items-end justify-between p-5">
                   <span className="max-w-[70%] text-2xl font-semibold uppercase tracking-[-0.05em] text-white/90">
                     {project.title}
@@ -512,10 +509,9 @@ export default function Projects() {
             "
           >
             <div
-              className={"relative mb-6 h-36 overflow-hidden rounded-2xl border border-white/15 " + (projectVisualStyles[project.title] ?? "bg-[radial-gradient(circle_at_75%_20%,rgba(96,165,250,0.45),transparent_30%),linear-gradient(135deg,#172554,#0f172a)]")}
+              className={"relative mb-6 h-36 overflow-hidden rounded-2xl " + (projectVisualStyles[project.title] ?? "bg-[radial-gradient(circle_at_75%_20%,rgba(96,165,250,0.45),transparent_30%),linear-gradient(135deg,#172554,#0f172a)]")}
             >
-              <div className="absolute -right-8 -top-10 h-32 w-32 rounded-full border border-white/20 bg-white/10 blur-sm"></div>
-              <div className="absolute -bottom-12 -left-8 h-36 w-36 rounded-full border border-blue-200/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-blue-500/[0.16]"></div>
               <div className="absolute inset-0 flex items-end justify-between p-5">
                 <span className="max-w-[70%] text-2xl font-semibold uppercase tracking-[-0.05em] text-white/90">
                   {project.title}
