@@ -35,17 +35,17 @@ export default function Home() {
               </h2>
 
               <p className="text-5xl sm:text-6xl font-normal text-gray-400 tracking-tight">
-                scalable web apps.
+                scalable full-stack apps.
               </p>
 
               <p className="text-lg text-gray-400 mt-6 max-w-xl leading-relaxed">
-                I’m a frontend engineer who builds modern web apps and keeps
-                things simple, scalable, and user-friendly. I care about clean
-                code, thoughtful UI, and working with great teams.
+                I’m a full-stack engineer who builds modern web applications
+                across the frontend and backend. I care about clean code,
+                thoughtful UI, scalable systems, and working with great teams.
               </p>
 
               <div className="flex gap-6 mt-6 text-sm text-gray-400">
-                <span>Frontend Engineer</span>
+                <span>Senior Full Stack Developer</span>
                 <a
                   href="mailto:torres.lawrence.986@gmail.com"
                   className="hover:text-blue-400 transition-colors"
@@ -125,17 +125,16 @@ export default function Home() {
             <p className="text-gray-400 leading-relaxed mb-6">
               I’ve worked across startups and enterprise environments,
               building production systems used by real customers. My focus
-              is frontend engineering — designing scalable UI architecture,
-              improving performance, and keeping codebases maintainable
-              as products grow.
+              is full-stack engineering — designing scalable UI architecture,
+              building reliable backend services, and keeping codebases
+              maintainable as products grow.
             </p>
 
             <p className="text-gray-400 leading-relaxed">
-              While frontend is my core strength, I’m comfortable working
-              across the stack — collaborating with backend teams,
-              reviewing APIs, and contributing to system design when needed.
-              I enjoy solving practical product problems and shipping
-              features that make sense.
+              I work across the stack, from polished interfaces and API
+              integrations to backend services and data-driven systems. I
+              enjoy solving practical product problems and shipping features
+              that make sense.
             </p>
           </div>
 

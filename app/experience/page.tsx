@@ -4,6 +4,15 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    role: "Senior Full Stack Developer",
+    company: "Aphex",
+    companyUrl: "https://www.linkedin.com/company/aphexhq/",
+    location: "Remote",
+    period: "Present",
+    description:
+      "Building and maintaining modern full-stack web applications, collaborating across engineering and product teams, and delivering reliable, scalable features.",
+  },
+  {
     role: "Senior Fullstack Engineer",
     company: "Procconv",
     location: "Remote",
@@ -90,7 +99,19 @@ export default function Experience() {
               </div>
 
               <p className="text-sm text-gray-400 mb-3">
-                {exp.company} • {exp.location}
+                {exp.companyUrl ? (
+                  <a
+                    href={exp.companyUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    {exp.company}
+                  </a>
+                ) : (
+                  exp.company
+                )}{" "}
+                • {exp.location}
               </p>
 
               <p className="text-gray-400 leading-relaxed">
